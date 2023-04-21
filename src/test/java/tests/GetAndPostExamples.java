@@ -14,7 +14,7 @@ import java.util.Map;
 public class GetAndPostExamples {
 
 	@Test
-	public void testGet()
+	public void testGet() //Retrieve the Data
 	{
 
 		baseURI = "https://reqres.in/api";
@@ -23,11 +23,11 @@ public class GetAndPostExamples {
 		statusCode(200).
 		body("data[4].first_name", equalTo("George")).
 		body("data.first_name", hasItems("George","Lindsay")).
-		body("data.id", hasItems(9,8));
+		body("data.id", hasItems(9,8)); 
 
 	}
 
-	@Test
+	@Test 
 	public void testPost()
 	{
 
